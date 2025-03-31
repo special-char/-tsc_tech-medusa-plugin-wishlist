@@ -1,6 +1,6 @@
 {
   "name": "@tsc_tech/medusa-plugin-wishlist",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A starter for Medusa plugins.",
   "author": "Medusa (https://medusajs.com)",
   "license": "MIT",
@@ -18,7 +18,6 @@
   "keywords": [
     "medusa",
     "plugin",
-    "medusa-plugin-other",
     "medusa-plugin",
     "medusa-v2",
     "wishlist",

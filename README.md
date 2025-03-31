@@ -105,7 +105,7 @@ cURL Request
 curl --location 'http://localhost:9000/store/customers' \
 --header 'Content-Type: application/json' \
 --header 'x-publishable-api-key: {{your-publishable-api-key}}' \
---header 'Authorization: Bearer {{your-beares-token}}' \
+--header 'Authorization: Bearer {{your-bearer-token}}' \
 --data-raw '{
     "email": "customer1@gmail.com"
 }'
@@ -129,7 +129,7 @@ cURL Request
 ```bash
 curl --location 'http://localhost:9000/store/wishlist' \
 --header 'x-publishable-api-key: {{your-publishable-api-key}}' \
---header 'Authorization: Bearer {{your-beares-token}}' \
+--header 'Authorization: Bearer {{your-bearer-token}}' \
 --header 'Content-Type: application/json' \
 --data '{
     "region_id": {{regionId}},
@@ -145,7 +145,7 @@ cURL Request
 curl --location 'http://localhost:9000/store/wishlist?region_id={regionId}' \
 --header 'Content-Type: application/json' \
 --header 'x-publishable-api-key: {{your-publishable-api-key}}' \
---header 'Authorization: Bearer {{your-beares-token}}' \
+--header 'Authorization: Bearer {{your-bearer-token}}' \
 ```
 
 6. Get wishlist in Admin - Bearer token will be the access token from admin login
@@ -153,8 +153,7 @@ curl --location 'http://localhost:9000/store/wishlist?region_id={regionId}' \
 cURL Request
 ```bash
 curl --location 'http://localhost:9000/admin/wishlist' \
---header 'x-publishable-api-key: {{your-publishable-api-key}}' \
---header 'Authorization: Bearer {{your-beares-token}}' \
+--header 'Authorization: Bearer {{your-bearer-token}}' \
 ```
 
 7. Get wishlist of a customer - Bearer token will be the access token from admin login
@@ -162,8 +161,7 @@ curl --location 'http://localhost:9000/admin/wishlist' \
 cURL Request
 ```bash
 curl --location 'http://localhost:9000/admin/wishlist/customer/{customerId}' \
---header 'x-publishable-api-key: {{your-publishable-api-key}}' \
---header 'Authorization: Bearer {{your-beares-token}}' \
+--header 'Authorization: Bearer {{your-bearer-token}}' \
 ```
 
 ## Community & Contributions
