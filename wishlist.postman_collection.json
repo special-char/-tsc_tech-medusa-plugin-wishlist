@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "30d2ef54-fe68-4577-9aa7-25bcab6673fb",
+		"name": "wishlist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23217536"
+	},
+	"item": [
+		{
+			"name": "wishlist",
+			"item": [
+				{
+					"name": "store",
+					"item": [
+						{
+							"name": "wishlist",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"disabled": true
+									},
+									{
+										"key": "x-publishable-api-key",
+										"value": "{{x-publishable-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6ImN1c18wMUpRTjhEQTBBV1hIUVFTRVhOWVRTVDkyUCIsImFjdG9yX3R5cGUiOiJjdXN0b21lciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUU44Qzk0WFhNU0NSOEJXQzhBQ0Y3MlciLCJhcHBfbWV0YWRhdGEiOnsiY3VzdG9tZXJfaWQiOiJjdXNfMDFKUU44REEwQVdYSFFRU0VYTllUU1Q5MlAifSwiaWF0IjoxNzQzMzk2NDU5LCJleHAiOjE3NDM0ODI4NTl9.mYAj6VnorrC7QV6Fs1K2OFAmp2PcTHkaIYN6HLe9bDk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"region_id\": \"reg_01JPPQQ5XAVR857XGBQTXSVEVE\",\n    \"variant_id\": \"variant_01JQE4RVYYRY8DYNZWT8PKTTDN\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{backend_url}}store/wishlist",
+									"host": [
+										"{{backend_url}}store"
+									],
+									"path": [
+										"wishlist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wishlist",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "x-publishable-api-key",
+										"value": "{{x-publishable-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6ImN1c18wMUpRTjhEQTBBV1hIUVFTRVhOWVRTVDkyUCIsImFjdG9yX3R5cGUiOiJjdXN0b21lciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUU44Qzk0WFhNU0NSOEJXQzhBQ0Y3MlciLCJhcHBfbWV0YWRhdGEiOnsiY3VzdG9tZXJfaWQiOiJjdXNfMDFKUU44REEwQVdYSFFRU0VYTllUU1Q5MlAifSwiaWF0IjoxNzQzMzk2NDU5LCJleHAiOjE3NDM0ODI4NTl9.mYAj6VnorrC7QV6Fs1K2OFAmp2PcTHkaIYN6HLe9bDk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{backend_url}}store/wishlist?region_id=reg_01JPPQQ5XAVR857XGBQTXSVEVE",
+									"host": [
+										"{{backend_url}}store"
+									],
+									"path": [
+										"wishlist"
+									],
+									"query": [
+										{
+											"key": "region_id",
+											"value": "reg_01JPPQQ5XAVR857XGBQTXSVEVE"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "admin",
+					"item": [
+						{
+							"name": "wishlist",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-publishable-api-key",
+										"value": "{{x-publishable-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6InVzZXJfMDFKTjNHQkJXS0pCUEhZUzBKVloySFZRN1YiLCJhY3Rvcl90eXBlIjoidXNlciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKTjNHQkJZUkRZSzJYTU5BWUhLQkZTVDkiLCJhcHBfbWV0YWRhdGEiOnsidXNlcl9pZCI6InVzZXJfMDFKTjNHQkJXS0pCUEhZUzBKVloySFZRN1YifSwiaWF0IjoxNzQwNzE5MzgxLCJleHAiOjE3NDA4MDU3ODF9.zPSsxjOApEX5GZKLmyL-RJz5vDYPa2HoR5ra2-22ycg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{backend_url}}admin/wishlist",
+									"host": [
+										"{{backend_url}}admin"
+									],
+									"path": [
+										"wishlist"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "wishlist/customer/{{customer_id}}",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-publishable-api-key",
+										"value": "{{x-publishable-api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6InVzZXJfMDFKTjNHQkJXS0pCUEhZUzBKVloySFZRN1YiLCJhY3Rvcl90eXBlIjoidXNlciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKTjNHQkJZUkRZSzJYTU5BWUhLQkZTVDkiLCJhcHBfbWV0YWRhdGEiOnsidXNlcl9pZCI6InVzZXJfMDFKTjNHQkJXS0pCUEhZUzBKVloySFZRN1YifSwiaWF0IjoxNzQwNzE5MzgxLCJleHAiOjE3NDA4MDU3ODF9.zPSsxjOApEX5GZKLmyL-RJz5vDYPa2HoR5ra2-22ycg",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{backend_url}}admin/wishlist/customer/cus_01JN3K2PVK2R4NFT5DN7482T0B",
+									"host": [
+										"{{backend_url}}admin"
+									],
+									"path": [
+										"wishlist",
+										"customer",
+										"cus_01JN3K2PVK2R4NFT5DN7482T0B"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "wishlist-plugin",
+			"item": [
+				{
+					"name": "customer-register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"customer1@gmail.com\",\n    \"password\": \"supersecret\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}auth/customer/emailpass/register",
+							"host": [
+								"{{backend_url}}auth"
+							],
+							"path": [
+								"customer",
+								"emailpass",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/store/customers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "x-publishable-api-key",
+								"value": "{{x-publishable-api-key}}"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6IiIsImFjdG9yX3R5cGUiOiJjdXN0b21lciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKTjNLMkFQRDYzRVlCWTRXWlk3Wk0zUlkiLCJhcHBfbWV0YWRhdGEiOnt9LCJpYXQiOjE3NDA2NTYxNTksImV4cCI6MTc0MDc0MjU1OX0.pXgZqWlBWeL4Ahjsy6SiP_FS3P2jdllBJsSrHamtzgc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"customer1@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}store/customers",
+							"host": [
+								"{{backend_url}}store"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/auth/customer/emailpass",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"customer1@gmail.com\",\n    \"password\": \"supersecret\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{backend_url}}auth/customer/emailpass",
+							"host": [
+								"{{backend_url}}auth"
+							],
+							"path": [
+								"customer",
+								"emailpass"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "backend_url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "x-publishable-api-key",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
