@@ -92,7 +92,6 @@ cURL Request
 ```bash
 curl --location 'http://localhost:9000/auth/customer/emailpass/register' \
 --header 'Content-Type: application/json' \
---header 'Cookie: connect.sid=s%3AMzVzmKE2aWiRHACLyGcdRkjgr-hM0qUh.N4C%2BAQSoq8wAP7fqJdDCtBe8M%2BEAsO2RtOnUB%2FaFzcw' \
 --data-raw '{
     "email": "customer1@gmail.com",
     "password": "supersecret"
@@ -105,9 +104,8 @@ cURL Request
 ```bash
 curl --location 'http://localhost:9000/store/customers' \
 --header 'Content-Type: application/json' \
---header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6IiIsImFjdG9yX3R5cGUiOiJjdXN0b21lciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUU44Qzk0WFhNU0NSOEJXQzhBQ0Y3MlciLCJhcHBfbWV0YWRhdGEiOnt9LCJpYXQiOjE3NDMzOTY0MTQsImV4cCI6MTc0MzQ4MjgxNH0.48_vkcznJVCc8DLcQc3z8Dlb-U78ekThNAJd-qfJhPk' \
---header 'Cookie: connect.sid=s%3AMzVzmKE2aWiRHACLyGcdRkjgr-hM0qUh.N4C%2BAQSoq8wAP7fqJdDCtBe8M%2BEAsO2RtOnUB%2FaFzcw' \
+--header 'x-publishable-api-key: {{your-publishable-api-key}}' \
+--header 'Authorization: Bearer {{your-beares-token}}' \
 --data-raw '{
     "email": "customer1@gmail.com"
 }'
@@ -119,7 +117,6 @@ cURL Request
 ```bash
 curl --location 'http://localhost:9000/auth/customer/emailpass' \
 --header 'Content-Type: application/json' \
---header 'Cookie: connect.sid=s%3AMzVzmKE2aWiRHACLyGcdRkjgr-hM0qUh.N4C%2BAQSoq8wAP7fqJdDCtBe8M%2BEAsO2RtOnUB%2FaFzcw' \
 --data-raw '{
     "email": "customer1@gmail.com",
     "password": "supersecret"
@@ -131,13 +128,12 @@ curl --location 'http://localhost:9000/auth/customer/emailpass' \
 cURL Request
 ```bash
 curl --location 'http://localhost:9000/store/wishlist' \
---header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6ImN1c18wMUpRTjhEQTBBV1hIUVFTRVhOWVRTVDkyUCIsImFjdG9yX3R5cGUiOiJjdXN0b21lciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUU44Qzk0WFhNU0NSOEJXQzhBQ0Y3MlciLCJhcHBfbWV0YWRhdGEiOnsiY3VzdG9tZXJfaWQiOiJjdXNfMDFKUU44REEwQVdYSFFRU0VYTllUU1Q5MlAifSwiaWF0IjoxNzQzMzk2NDU5LCJleHAiOjE3NDM0ODI4NTl9.mYAj6VnorrC7QV6Fs1K2OFAmp2PcTHkaIYN6HLe9bDk' \
+--header 'x-publishable-api-key: {{your-publishable-api-key}}' \
+--header 'Authorization: Bearer {{your-beares-token}}' \
 --header 'Content-Type: application/json' \
---header 'Cookie: connect.sid=s%3Amhwc_r8nn2b7E4mXvjkst0X0Ic_jpQvs.ViNKO2XVFHVyg4r%2FmukYvVvLQ8YgSaHZw8YwQcBBNec' \
 --data '{
-    "region_id": "reg_01JPPQQ5XAVR857XGBQTXSVEVE",
-    "variant_id": "variant_01JQE4RVYYRY8DYNZWT8PKTTDN"
+    "region_id": {{regionId}},
+    "variant_id": {{variantId}}
 }'
 ```
 
@@ -146,11 +142,10 @@ curl --location 'http://localhost:9000/store/wishlist' \
 
 cURL Request
 ```bash
-curl --location 'http://localhost:9000/store/wishlist?region_id=reg_01JPPQQ5XAVR857XGBQTXSVEVE' \
+curl --location 'http://localhost:9000/store/wishlist?region_id={regionId}' \
 --header 'Content-Type: application/json' \
---header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6ImN1c18wMUpRTjhEQTBBV1hIUVFTRVhOWVRTVDkyUCIsImFjdG9yX3R5cGUiOiJjdXN0b21lciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUU44Qzk0WFhNU0NSOEJXQzhBQ0Y3MlciLCJhcHBfbWV0YWRhdGEiOnsiY3VzdG9tZXJfaWQiOiJjdXNfMDFKUU44REEwQVdYSFFRU0VYTllUU1Q5MlAifSwiaWF0IjoxNzQzMzk2NDU5LCJleHAiOjE3NDM0ODI4NTl9.mYAj6VnorrC7QV6Fs1K2OFAmp2PcTHkaIYN6HLe9bDk' \
---header 'Cookie: connect.sid=s%3AMzVzmKE2aWiRHACLyGcdRkjgr-hM0qUh.N4C%2BAQSoq8wAP7fqJdDCtBe8M%2BEAsO2RtOnUB%2FaFzcw'
+--header 'x-publishable-api-key: {{your-publishable-api-key}}' \
+--header 'Authorization: Bearer {{your-beares-token}}' \
 ```
 
 6. Get wishlist in Admin - Bearer token will be the access token from admin login
@@ -158,19 +153,17 @@ curl --location 'http://localhost:9000/store/wishlist?region_id=reg_01JPPQQ5XAVR
 cURL Request
 ```bash
 curl --location 'http://localhost:9000/admin/wishlist' \
---header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6InVzZXJfMDFKUE03WTZIQUozRkIyWURRWlhNMjUzU1QiLCJhY3Rvcl90eXBlIjoidXNlciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUE03WTZLSEtLRENDSDBNMEUwNTZSWk0iLCJhcHBfbWV0YWRhdGEiOnsidXNlcl9pZCI6InVzZXJfMDFKUE03WTZIQUozRkIyWURRWlhNMjUzU1QifSwiaWF0IjoxNzQzMzk2NTI0LCJleHAiOjE3NDM0ODI5MjR9.0ENeHYsMND4lFHhQq4LRvb1qyLdFWpjPQOHPtx39lLM' \
---header 'Cookie: connect.sid=s%3AEuaqo9Dcz6YSTrMt5RsSIWEKVMirHqFi.InHGrW8MymZdo9OuphU9Z2NK62NBc2CTyPZ7T0llWtA'
+--header 'x-publishable-api-key: {{your-publishable-api-key}}' \
+--header 'Authorization: Bearer {{your-beares-token}}' \
 ```
 
 7. Get wishlist of a customer - Bearer token will be the access token from admin login
 
 cURL Request
 ```bash
-curl --location 'http://localhost:9000/admin/wishlist/customer/cus_01JQN8DA0AWXHQQSEXNYTST92P' \
---header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
---header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY3Rvcl9pZCI6InVzZXJfMDFKUE03WTZIQUozRkIyWURRWlhNMjUzU1QiLCJhY3Rvcl90eXBlIjoidXNlciIsImF1dGhfaWRlbnRpdHlfaWQiOiJhdXRoaWRfMDFKUE03WTZLSEtLRENDSDBNMEUwNTZSWk0iLCJhcHBfbWV0YWRhdGEiOnsidXNlcl9pZCI6InVzZXJfMDFKUE03WTZIQUozRkIyWURRWlhNMjUzU1QifSwiaWF0IjoxNzQzMzk2NTI0LCJleHAiOjE3NDM0ODI5MjR9.0ENeHYsMND4lFHhQq4LRvb1qyLdFWpjPQOHPtx39lLM' \
---header 'Cookie: connect.sid=s%3AXQMMmPwLwkAQAkA3N6bg0-hHRVwpPQY6.HvDoBgsZ7UaalVdjgm2cSFvjtfNrRp0VWPqUWyFS6Uw'
+curl --location 'http://localhost:9000/admin/wishlist/customer/{customerId}' \
+--header 'x-publishable-api-key: {{your-publishable-api-key}}' \
+--header 'Authorization: Bearer {{your-beares-token}}' \
 ```
 
 ## Community & Contributions
