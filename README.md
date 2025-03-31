@@ -88,7 +88,7 @@ You can see the wishlist items added by a customer in the admin-dashboard
 
 1. Register customer 'auth/customer/emailpass/register'
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/auth/customer/emailpass/register' \
 --header 'Content-Type: application/json' \
@@ -101,7 +101,7 @@ curl --location 'http://localhost:9000/auth/customer/emailpass/register' \
 
 2. Register customer in store 'store/customers' - pass the token that you got register customer into this api.
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/store/customers' \
 --header 'Content-Type: application/json' \
@@ -115,7 +115,7 @@ curl --location 'http://localhost:9000/store/customers' \
 
 3. Login customer 
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/auth/customer/emailpass' \
 --header 'Content-Type: application/json' \
@@ -128,7 +128,7 @@ curl --location 'http://localhost:9000/auth/customer/emailpass' \
 
 4. Post Wishlist from store - pass the token that you got from login customer into this api
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/store/wishlist' \
 --header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
@@ -144,7 +144,7 @@ curl --location 'http://localhost:9000/store/wishlist' \
 
 5. Get Wishlist (store) - pass the token that you got from login customer into this api
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/store/wishlist?region_id=reg_01JPPQQ5XAVR857XGBQTXSVEVE' \
 --header 'Content-Type: application/json' \
@@ -155,7 +155,7 @@ curl --location 'http://localhost:9000/store/wishlist?region_id=reg_01JPPQQ5XAVR
 
 6. Get wishlist in Admin - Bearer token will be the access token from admin login
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/admin/wishlist' \
 --header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
@@ -165,7 +165,7 @@ curl --location 'http://localhost:9000/admin/wishlist' \
 
 7. Get wishlist of a customer - Bearer token will be the access token from admin login
 
-### cURL Request
+cURL Request
 ```bash
 curl --location 'http://localhost:9000/admin/wishlist/customer/cus_01JQN8DA0AWXHQQSEXNYTST92P' \
 --header 'x-publishable-api-key: pk_766b31d55b596b6d07aa0e12dc81df499867d47448eef7b5ece2158142fa3c45' \
