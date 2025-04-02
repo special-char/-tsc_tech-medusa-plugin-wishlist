@@ -164,6 +164,17 @@ curl --location 'http://localhost:9000/admin/wishlist/customer/{customerId}' \
 --header 'Authorization: Bearer {{your-bearer-token}}' \
 ```
 
+8. Check if wishlist has variant
+
+cURL Request
+```bash
+curl --location 'localhost:9000/store/wishlist-has-variant?variant_id=variantId' \
+
+--header 'x-publishable-api-key: {{your-publishable-api-key}}' \
+
+--header 'Authorization: Bearer {{your-bearer-token}}' \ 
+```
+
 ## Community & Contributions
 
 The community and core team are available in GitHub Discussions, where you can ask for support, discuss roadmap, and share ideas.
